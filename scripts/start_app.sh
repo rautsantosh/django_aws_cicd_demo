@@ -5,7 +5,6 @@ source /home/ubuntu/env/bin/activate
 cd /home/ubuntu/django_aws_cicd_demo/ && python3 manage.py migrate
 cd /home/ubuntu/django_aws_cicd_demo/ && python3 manage.py makemigrations
 cd /home/ubuntu/django_aws_cicd_demo/ && python3 manage.py collectstatic
-# pip3 install whitenoise
 sudo chown ubuntu:www-data /home/ubuntu/django_aws_cicd_demo
 sudo chown ubuntu:www-data /home/ubuntu/django_aws_cicd_demo/public
 sudo service gunicorn restart
