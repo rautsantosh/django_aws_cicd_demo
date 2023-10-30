@@ -2,9 +2,9 @@
 
 sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/django_aws_cicd_demo/notspam/settings.py
 
-python3 /home/ubuntu/django_aws_cicd_demo/manage.py migrate 
-python3 /home/ubuntu/django_aws_cicd_demo/manage.py makemigrations     
-python3 /home/ubuntu/django_aws_cicd_demo/manage.py collectstatic
+/usr/bin/python3 manage.py migrate 
+/usr/bin/python3 manage.py makemigrations     
+/usr/bin/python3 manage.py collectstatic
 sudo chown ubuntu:ubuntu /home/ubuntu/django_aws_cicd_demo
 sudo chown ubuntu:ubuntu /home/ubuntu/django_aws_cicd_demo/public
 sudo service gunicorn restart
