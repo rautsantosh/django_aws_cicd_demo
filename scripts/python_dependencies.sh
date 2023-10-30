@@ -2,4 +2,4 @@
 
 virtualenv /home/ubuntu/env
 source /home/ubuntu/env/bin/activate
-pip install -r /home/ubuntu/django_aws_cicd_demo/requirements.txt
+pip3 install -r /home/ubuntu/django_aws_cicd_demo/requirements.txt

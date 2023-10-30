@@ -9,28 +9,28 @@ permissions:
     group: ubuntu
 hooks:
   BeforeInstall:
-      - location: /home/ubuntu/django_aws_cicd_demo/scripts/clean_instance.sh
+      - location: scripts/clean_instance.sh
         timeout: 300
         runas: ubuntu
   AfterInstall:
-      - location: /home/ubuntu/django_aws_cicd_demo/scripts/instance_os_dependencies.sh
+      - location: scripts/instance_os_dependencies.sh
         timeout: 300
         runas: ubuntu
-      - location: /home/ubuntu/django_aws_cicd_demo/scripts/python_dependencies.sh
+      - location: scripts/python_dependencies.sh
         timeout: 300
         runas: ubuntu
-      - location: /home/ubuntu/django_aws_cicd_demo/scripts/gunicorn.sh
+      - location: scripts/gunicorn.sh
         timeout: 300
         runas: ubuntu
-      - location: /home/ubuntu/django_aws_cicd_demo/scripts/nginx.sh
+      - location: scripts/nginx.sh
         timeout: 300
         runas: ubuntu
   ApplicationStop:
-      - location: /home/ubuntu/django_aws_cicd_demo/scripts/stop_app.sh
+      - location: scripts/stop_app.sh
         timeout: 300
         runas: ubuntu
   ApplicationStart:
-      - location: /home/ubuntu/django_aws_cicd_demo/scripts/start_app.sh
+      - location: scripts/start_app.sh
         timeout: 300
         runas: ubuntu
   

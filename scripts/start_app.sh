@@ -1,10 +1,10 @@
 #!/usr/bin/bash 
 
 sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/django_aws_cicd_demo/notspam/settings.py
-sudo chmod +x /home/ubuntu/django_aws_cicd_demo/manage.py
-python manage.py migrate 
-python manage.py makemigrations     
-python manage.py collectstatic
+source /home/ubuntu/env/bin/activate
+python3 manage.py migrate 
+python3 manage.py makemigrations     
+python3 manage.py collectstatic
 sudo chown ubuntu:ubuntu /home/ubuntu/django_aws_cicd_demo
 sudo chown ubuntu:ubuntu /home/ubuntu/django_aws_cicd_demo/public
 sudo service gunicorn restart
